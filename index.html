@@ -57,8 +57,8 @@
       <!-- About us -->
       <section class="about">
         <div class="container">
-          <h2>Your reliable web and app development partner</h2>
-          <p>
+          <h2 class="about__title">Your reliable web and app development partner</h2>
+          <p class="about__desc">
             We make successful products that turn great ideas into user-friendly solutions for
             consumers and businesses.
           </p>
@@ -75,47 +75,47 @@
       <!-- Services -->
       <section class="services">
         <div class="container">
-          <h2>Where are you now?</h2>
-          <p>
+          <h2 class="services__title">Where are you now?</h2>
+          <p class="services__hint">
             Use the tabs below to identify what stage you’re at so we can help you to move on to the
             next phase of your project.
           </p>
-          <ul>
-            <li><button type="button">Design</button></li>
-            <li><button type="button">Develop</button></li>
-            <li><button type="button">Launch</button></li>
+          <ul class="services__button-list">
+            <li><button type="button" class="services__button active">Design</button></li>
+            <li><button type="button" class="services__button">Develop</button></li>
+            <li><button type="button" class="services__button">Launch</button></li>
           </ul>
-          <ul>
-            <li>
-              <h3>1. Research</h3>
-              <p>
+          <ul class="services__list">
+            <li class="services__item">
+              <h3 class="card__title">1. Research</h3>
+              <p class="card__description">
                 We can help you to better understand your target audience, enabling you to create a
                 more powerful value proposition for your business.
               </p>
             </li>
-            <li>
-              <h3>2. Requirements</h3>
-              <p>
+            <li class="services__item">
+              <h3 class="card__title">2. Requirements</h3>
+              <p class="card__description">
                 Based on research insights, we can help you to determine how your product and
                 service should function.
               </p>
             </li>
-            <li>
-              <h3>3. UI Design</h3>
-              <p>
+            <li class="services__item">
+              <h3 class="card__title">3. UI Design</h3>
+              <p class="card__description">
                 We’re able to create unique and aesthetically pleasing visual design solutions that
                 fulfil both your user needs and business goals.
               </p>
             </li>
-            <li>
-              <h3>4. Prototyping</h3>
-              <p>
+            <li class="services__item">
+              <h3 class="card__title">4. Prototyping</h3>
+              <p class="card__description">
                 We can provide you with a clickable prototype so you can test and play with your
                 product; allowing you to get a better feel for the user experience.
               </p>
             </li>
           </ul>
-          <a href="">Contact us</a>
+          <a class="hero-link services__link" href="">Contact us</a>
         </div>
       </section>
       <!-- Examples of our work -->
@@ -187,6 +187,60 @@
           <button type="button" class="work-btn">See more</button>
         </div>
       </section>
+      <!-- Callback form -->
+      <section class="form">
+        <div class="container">
+          <h2 class="visually-hidden">Callback form</h2>
+          <form class="callback-form">
+            <strong class="form-title">Request a callback from our expert team</strong>
+            <input class="form-input" type="text" placeholder="Required service*" required />
+            <textarea
+              class="form-input form-input-details"
+              placeholder="Details*"
+              required
+            ></textarea>
+            <button class="form-btn" type="submit">Send request</button>
+          </form>
+        </div>
+      </section>
+      <!-- Resources -->
+      <section class="resources">
+        <div class="container">
+          <h2>Resources</h2>
+          <p>
+            Sharing the latest and greatest from industry trends, insights, inspiration and
+            successful Appello ventures.
+          </p>
+          <ul>
+            <li>
+              <img src="./images/res1.jpg" alt="Chief Design Officer" />
+              <h3>
+                Sharing the latest and greatest from industry trends, insights, inspiration and
+                successful Appello ventures.
+              </h3>
+              <p>Meet our Chief Design Officer, Pharaoh Woghiren.</p>
+            </li>
+            <li>
+              <img src="./images/res2.jpg" alt="Mobile App Redesign" />
+              <h3>
+                Refreshing Mobile Applications: How to Know When a Mobile App Redesign is Necessary?
+              </h3>
+              <p>
+                When to consider a mobile app redesign and signs to look out for to make sure your
+                app captures user attention and loyalty.
+              </p>
+            </li>
+            <li>
+              <img src="./images/res3.jpg" alt="Best People Management Software Solution" />
+              <h3>Your Guide to Developing the Best People Management Software Solution</h3>
+              <p>
+                Custom employee management software or people management software solutions will be
+                extremely beneficial to not only your HR department but the entire company.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
     </main>
     <!--
         |==============================
@@ -199,6 +253,9 @@
       </li>
       <li>
         <a class="practice-link" href="./grids.html">Піти подивитись на гріди</a>
+      </li>
+      <li>
+        <a class="practice-link" href="./moreandless.html">Піти подивитись на чекбокс</a>
       </li>
     </ul>
   </body>

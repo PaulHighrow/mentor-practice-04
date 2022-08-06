@@ -1,0 +1,160 @@
+/* Палітра кольорів */
+:root {
+  --secondary-font-color: #ffffff;
+  --accent-color: #0a8bfe;
+
+  --bg-color: #0d0d33;
+
+  /* Змінна швидкості анімацій */
+  --animation-global: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Загальні стилі для основного тексту */
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Скидання відступів тегів */
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Скидання підкреслювання посилань */
+a {
+  text-decoration: none;
+}
+
+/* Скидання маркерів списку */
+ul {
+  list-style: none;
+}
+
+/* Обмеження ширини контейнеру */
+.container {
+  width: 1190px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+/* Стилі умов завдання */
+.task {
+  font-size: 30px;
+  line-height: 1.4;
+  text-align: center;
+  color: var(--accent-color);
+  margin-bottom: 110px;
+}
+
+/* Рамка для виконаного завдання */
+.solution {
+  padding: 25px;
+  outline: 1px solid red;
+}
+/*
+  |==============================
+  | Стилі, застосовані для виконання завдання
+  |==============================
+*/
+
+/* Прихований текст */
+.hidden-text {
+  display: none;
+
+  /* Косметичний відступ - для вирішення задачі необов'язковий */
+  margin-bottom: 15px;
+}
+
+/* Прихований чекбокс */
+.read-input {
+  appearance: none;
+}
+
+/* Поява прихованого тексту при включеному чекбоксі */
+.read-input:checked ~ .hidden-text {
+  display: block;
+}
+
+/* Стилі для імітації "кнопочного" вигляду чекбоксу */
+.read-label {
+  display: flex;
+  width: 120px;
+  padding: 20px;
+  border: 1px solid black;
+  background-color: azure;
+  user-select: none;
+}
+
+/* Прихований текст для зміни при перемиканні чекбоксу */
+.read-less {
+  display: none;
+}
+
+/* Поява прихованого тексту "кнопки" */
+.read-input:checked ~ .read-label .read-less {
+  display: flex;
+}
+
+/* Та зникнення початкового тексту "кнопки" */
+.read-input:checked ~ .read-label .read-more {
+  display: none;
+}
+
+/*
+  |==============================
+  | Стилі для кнопок навігації по сторінкам практичного заняття
+  |==============================
+*/
+
+.practice-list {
+  /* Фіксована позиція кнопок */
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+
+  /* Зміна блокової моделі для позиціонування */
+  display: flex;
+
+  /* Зміна напрямку флекс-потоку */
+  flex-direction: column;
+
+  /* Розрив між кнопками */
+  gap: 40px;
+
+  /* Перекриття кнопками іншого контенту */
+  z-index: 1;
+}
+
+/* Кнопки навігації по сторінкам практичного заняття */
+.practice-link {
+  /* Зміна блокової моделі для вертикальної геометрії */
+  display: block;
+
+  /* Вирівнювання тексту кнопки */
+  text-align: center;
+
+  /* Поля кнопки */
+  padding: 15px 15px;
+
+  /* Шрифт */
+  font-size: 15px;
+  line-height: 1.4;
+
+  /* Кольори та заокруглення рамки */
+  background-color: var(--accent-color);
+  color: var(--secondary-font-color);
+  border-radius: 4px;
+  max-width: 117px;
+
+  /* Ефекти переходів кольорів кнопок */
+  transition: color var(--animation-global), background-color var(--animation-global);
+}
+
+/* Ефекти при наведенні */
+.practice-link:hover,
+.practice-link:focus {
+  background-color: var(--bg-color);
+  color: var(--accent-color);
+}

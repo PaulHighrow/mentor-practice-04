@@ -181,12 +181,140 @@ ul {
 
 /*
   |==============================
-  | Необроблені секції
+  | Необроблена секція About
   |==============================
 */
 .about,
 .services {
   background-color: var(--secondary-font-color);
+}
+
+/* Стилізація заголовка */
+.about__title {
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 1.46;
+  color: var(--black);
+}
+
+/* Стилізація супровідного тексту */
+.about__desc {
+  font-size: 16px;
+  line-height: 1.88;
+  color: var(--main-font-color);
+}
+
+/*
+  |==============================
+  | Секція послуг компанії
+  |==============================
+*/
+
+/* Поля та центрування елементів секції */
+.services {
+  padding: 150px;
+  text-align: center;
+}
+
+/* Заголовок */
+.services__title {
+  font-weight: 400;
+  font-size: 41px;
+  line-height: 1.22;
+
+  color: var(--black);
+
+  margin-bottom: 35px;
+}
+
+/* Підказка секції */
+.services__hint {
+  font-size: 12px;
+  line-height: 2.5;
+
+  color: var(--main-font-color);
+
+  margin-bottom: 85px;
+}
+
+/* Список кнопок послуг */
+.services__button-list {
+  /* Горизонтальне положення */
+  display: flex;
+
+  /* Відступи між елементами */
+  gap: 100px;
+
+  /* Центрування елементів */
+  justify-content: center;
+
+  /* Відступ від списку */
+  margin-bottom: 50px;
+}
+
+/* Кнопки перемикання списків послуг */
+.services__button {
+  font-size: 23px;
+  line-height: 1.65;
+  text-align: center;
+
+  color: var(--black);
+  border: none;
+  background-color: transparent;
+}
+
+/* Стиль активної кнопки */
+.active {
+  color: var(--accent-color);
+}
+
+/* Список послуг */
+.services__list {
+  /* Горизонтальне положення */
+  display: flex;
+
+  /* Розташування списку в два рядки з заданим відступом */
+  flex-wrap: wrap;
+  gap: 40px;
+
+  /* Вирівнювання тексту по лівій стороні */
+  text-align: left;
+
+  margin-bottom: 50px;
+}
+
+/* Елемент списку */
+.services__item {
+  border: 1px solid #e8e8e8;
+  padding: 38px 40px;
+
+  /* Формула розрахунку ширини елементу */
+  flex-basis: calc((100% - 40px) / 2);
+}
+
+/* Заголовок картки послуги */
+.card__title {
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 1.47;
+
+  color: var(--black);
+
+  margin-bottom: 23px;
+}
+
+/* Опис картки послуги */
+.card__description {
+  font-size: 16px;
+  line-height: 1.88;
+
+  color: var(--main-font-color);
+}
+
+/* Кнопка "Зв'яжіться з нами" */
+.services__link {
+  /* Поля кнопки */
+  padding: 15px 49px;
 }
 
 /*
@@ -315,6 +443,114 @@ ul {
 
 /*
   |==============================
+  | Секція форми зв'язку
+  |==============================
+*/
+
+/* Розміри та фонове зображення секції */
+.form {
+  padding: 414px 0 210px;
+  background-image: url(../images/bg-form.png);
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+/* Розміри та стилізація форми */
+.callback-form {
+  width: 600px;
+  height: 571px;
+
+  background-color: var(--secondary-font-color);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.05);
+  border-radius: 0px;
+
+  /* Поля форми */
+  padding: 30px 50px;
+
+  /* Центрування форми */
+  margin: 0 auto;
+}
+
+/* Заголовок форми */
+.form-title {
+  /* Задання вертикальної геометрії */
+  display: block;
+
+  /* Обмеження ширини блоку заголовку для переноса згідно з макетом */
+  max-width: 320px;
+
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 1.52;
+  color: var(--black);
+
+  margin-bottom: 125px;
+}
+
+/* Поля форми */
+.form-input {
+  /* Розтягування на всю ширину блоку */
+  width: 100%;
+  height: 60px;
+
+  padding: 18px 20px;
+
+  /* Нижній відступ полів форми */
+  margin-bottom: 30px;
+
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+
+  /* Шрифт тексту в полі */
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 2;
+
+  color: var(--black);
+
+  /* Приховування аутлайна при фокусі */
+  outline: transparent;
+}
+
+/* Колір плейсхолдера */
+.form-input::placeholder {
+  color: var(--black);
+}
+
+/* Уточнення стилів для багаторядкового поля */
+.form-input-details {
+  height: 120px;
+  margin-bottom: 40px;
+
+  /* Заборона зміни розміру */
+  resize: none;
+}
+
+.form-btn {
+  /* Поля кнопки */
+  padding: 18px 48px;
+  margin: 0 auto;
+  display: block;
+
+  /* Шрифт */
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 2;
+
+  /* Кольори та заокруглення рамки */
+  background-color: var(--accent-color);
+  color: var(--secondary-font-color);
+  border: none;
+  border-radius: 4px;
+
+  /* Курсор */
+  cursor: pointer;
+}
+
+/*
+  |==============================
   | Стилі для кнопок навігації по сторінкам практичного заняття
   |==============================
 */
@@ -369,4 +605,19 @@ ul {
 .practice-link:focus {
   background-color: var(--bg-color);
   color: var(--accent-color);
+}
+
+/* Клас для прихованих елементів */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
