@@ -1,0 +1,372 @@
+/* Палітра кольорів */
+:root {
+  --secondary-font-color: #ffffff;
+  --black: #000;
+  --main-font-color: #737373;
+  --accent-color: #0a8bfe;
+
+  --gray-bg: #888888;
+  --bg-color: #0d0d33;
+
+  /* Змінна швидкості анімацій */
+  --animation-global: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Загальні стилі для основного тексту */
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--main-font-color);
+}
+
+/* Скидання відступів тегів */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Скидання підкреслювання посилань */
+a {
+  text-decoration: none;
+}
+
+/* Скидання маркерів списку */
+ul {
+  list-style: none;
+}
+
+/* Загальний контейнер сторінки */
+.container {
+  width: 1190px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+/* ========== Хедер ========== */
+/* Позиціонування хедеру для правильного розташування фонового зображення */
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  /* Разом з падінгами елементів хедеру розширює хедер на вірну величину */
+  padding-top: 25px;
+}
+
+.header::before {
+  /* position: absolute; */
+  top: auto;
+}
+
+/* Горизонтальне розташування елементів хедеру та їх центрування */
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Стилі логотипу */
+.header-logo {
+  /* Правильне горизонтальне розташування елементів логотипу */
+  display: flex;
+  align-items: center;
+
+  /* Відступ від логотипу до меню навігації */
+  margin-right: auto;
+
+  /* Колір логотипу */
+  color: var(--secondary-font-color);
+  font-size: 16px;
+}
+
+/* Відступ від зображення логотипу до тексту логотипу */
+.header-img {
+  margin-right: 8px;
+}
+
+/* Горизонтальне розташування меню навігації та відступи між елементами */
+.header-list {
+  display: flex;
+  gap: 50px;
+}
+
+/* Стилі посилань меню навігації */
+.header-link {
+  color: var(--secondary-font-color);
+  font-size: 13px;
+  line-height: 2.31;
+  /* Розширення клікабельної області елементів меню */
+  display: block;
+  padding: 30px 0;
+}
+
+/* Стилі кнопки */
+.header-button {
+  /* Шрифт */
+  font-size: 13px;
+  line-height: calc(16 / 13);
+
+  /* Колір та рамка */
+  color: var(--secondary-font-color);
+  background-color: transparent;
+  border: 1px solid var(--secondary-font-color);
+  border-radius: 4px;
+  cursor: pointer;
+
+  /* Відступи та внутрішні поля */
+  margin-left: 50px;
+  padding: 12px 16px;
+}
+
+/* Поля секції-героя */
+.hero {
+  padding-top: 240px;
+  padding-bottom: 270px;
+
+  /* Фон */
+  background-color: var(--bg-color);
+  width: 100%;
+
+  /* Фонове зображення */
+  background-image: url(../images/bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* Заголовок секції-героя */
+.hero-title {
+  max-width: 421px;
+  margin-bottom: 35px;
+
+  font-size: 42px;
+  font-weight: 400;
+  line-height: calc(50 / 42);
+
+  color: var(--secondary-font-color);
+}
+
+/* Текст секції-героя */
+.hero-txt {
+  max-width: 410px;
+  margin-bottom: 35px;
+
+  font-size: 11px;
+  line-height: calc(30 / 11);
+
+  color: var(--secondary-font-color);
+}
+
+/* Кнопка секції-героя */
+.hero-link {
+  /* Поля кнопки */
+  padding: 15px 37px;
+
+  /* Шрифт */
+  font-size: 15px;
+  line-height: 2;
+
+  /* Кольори та заокруглення рамки */
+  background-color: var(--accent-color);
+  color: var(--secondary-font-color);
+  border-radius: 4px;
+}
+
+/*
+  |==============================
+  | Необроблені секції
+  |==============================
+*/
+.about,
+.services {
+  background-color: var(--secondary-font-color);
+}
+
+/*
+  |==============================
+  | Приклади робіт
+  |==============================
+*/
+
+.work {
+  /* Фон секції прикладів робіт, реалізований лінійним градієнтом */
+  background: linear-gradient(
+    /* Напрямок */ to bottom,
+    /* Перший колір, стартова позиція */ var(--bg-color),
+    /* Перший колір, фінальна позиція */ var(--bg-color) 880px,
+    /* Другий колір, старт */ var(--secondary-font-color),
+    880px,
+    /* Другий колір, фінал */ var(--secondary-font-color) 100%
+  );
+
+  /* Поля секції */
+  padding-top: 150px;
+  padding-bottom: 70px;
+}
+
+/* Заголовок секції робіт */
+.work-title {
+  font-weight: 400;
+  font-size: 42px;
+  line-height: 1.19;
+  color: var(--secondary-font-color);
+  text-align: center;
+
+  margin-bottom: 80px;
+}
+
+/* Вирівнювання елементів списку досягнень */
+.work-list {
+  display: flex;
+  justify-content: center;
+  padding: 0 20px 0 40px;
+  gap: 140px;
+  margin-bottom: 100px;
+}
+
+/* Задання ширини елементів списку по формулі */
+.work-item {
+  --items: 4;
+  flex-basis: calc((100% - 140px * (var(--items) - 1)) / var(--items));
+}
+
+/* Стилі тексту списку досягнень */
+.work-text {
+  font-size: 11px;
+  line-height: 2.73;
+  color: var(--secondary-font-color);
+}
+
+/* Стилі чисел списку досягнень */
+.work-number {
+  display: block;
+  color: var(--secondary-font-color);
+  font-size: 42px;
+  line-height: 1.19;
+
+  margin-bottom: 15px;
+}
+
+/* Список робіт */
+.project-list {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  /* Відступ від списку до кнопки */
+  margin-bottom: 40px;
+}
+
+/* Стилі елементів списку робіт */
+.project-item {
+  width: 565px;
+
+  padding: 10px;
+
+  background-color: var(--secondary-font-color);
+
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Поля контейнера опису роботи */
+.project-description {
+  padding: 45px 30px 35px;
+}
+
+/* Стилі заголовків опису робіт */
+.project-title {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.58;
+  color: var(--black);
+
+  margin-bottom: 25px;
+}
+
+/* Стилі тексту опису робіт */
+.project-text {
+  font-size: 16px;
+  line-height: 1.88;
+  color: var(--main-font-color);
+}
+
+/* Кнопка списку робіт */
+.work-btn {
+  display: block;
+
+  padding: 15px 50px;
+  margin: 0 auto;
+
+  line-height: 2;
+
+  color: var(--secondary-font-color);
+  background: var(--accent-color);
+  border: none;
+  border-radius: 4px;
+
+  cursor: pointer;
+}
+
+/*
+  |==============================
+  | Стилі для кнопок навігації по сторінкам практичного заняття
+  |==============================
+*/
+
+.practice-list {
+  /* Фіксована позиція кнопок */
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+
+  /* Зміна блокової моделі для позиціонування */
+  display: flex;
+
+  /* Зміна напрямку флекс-потоку */
+  flex-direction: column;
+
+  /* Розрив між кнопками */
+  gap: 40px;
+
+  /* Перекриття кнопками іншого контенту */
+  z-index: 1;
+}
+
+/* Кнопки навігації по сторінкам практичного заняття */
+.practice-link {
+  /* Зміна блокової моделі для вертикальної геометрії */
+  display: block;
+
+  /* Вирівнювання тексту кнопки */
+  text-align: center;
+
+  /* Поля кнопки */
+  padding: 15px 15px;
+
+  /* Шрифт */
+  font-size: 15px;
+  line-height: 1.4;
+
+  /* Кольори та заокруглення рамки */
+  background-color: var(--accent-color);
+  color: var(--secondary-font-color);
+  border-radius: 4px;
+  max-width: 117px;
+
+  /* Ефекти переходів кольорів кнопок */
+  transition: color var(--animation-global), background-color var(--animation-global);
+}
+
+/* Ефекти при наведенні */
+.practice-link:hover,
+.practice-link:focus {
+  background-color: var(--bg-color);
+  color: var(--accent-color);
+}
